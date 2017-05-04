@@ -45,7 +45,7 @@ Builder.load_string("""
 """)
 
 class Highest(Screen):
-    r1c2 = StringProperty(str(2))
+    r1c2 = StringProperty(str(3))
 
     def step(self,a):
         f=open("C:\Users\ARAVIND ANIL\Desktop\my_file.txt","w+")
