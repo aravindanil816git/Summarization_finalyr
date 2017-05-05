@@ -1,0 +1,36 @@
+<Myui>:
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab: False
+
+
+    TabbedPanelItem:
+        text: 'Original'
+        FloatLayout:
+            TextInput:
+                id: lt0
+                hint_text: 'Enter Text to be summarized'
+                foreground_color: (0, 0, 0,1)
+                background_color: (1, 1, 1,1)
+                pos_hint: {'x': 0, 'top': 1}
+                size_hint: 0.5,0.75
+
+            Button:
+                text: 'Summarize'
+                height: 15
+                on_press: root.step(lt0.text)
+                pos_hint: {'y': 0, 'down':1}
+                background_color: (0.035, 0.843, 0.984,1)
+                foreground_color: (1, 1, 1,1)
+                font_size: 32
+                size_hint: 1, .25
+        
+    TabbedPanelItem:
+        text: 'Summary'
+
+        ScrollView:
+            Label:
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                text: root.finaltxt
+
