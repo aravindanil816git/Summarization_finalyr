@@ -2,6 +2,11 @@
     pos_hint: {'center_x': .5, 'center_y': .5}
     do_default_tab: False
 
+    TabbedPanelItem:
+        text: 'Upload'
+        Button:
+            text: 'Upload'
+            on_press: root.upload()
 
     TabbedPanelItem:
         text: 'Original'
